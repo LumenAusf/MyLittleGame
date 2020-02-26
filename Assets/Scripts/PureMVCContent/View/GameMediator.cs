@@ -54,6 +54,8 @@ namespace PureMVCContent.View
                     View.ResetPerson();
                     break;
                 case MyFacade.GAME_IS_DONE:
+                    View.DisablePortal();
+                    View.ResetPerson();
                     Hide();
                     break;
             }
@@ -105,6 +107,11 @@ namespace PureMVCContent.View
         public void Hide()
         {
             View.gameObject.SetActive(false);
+        }
+
+        public Vector3 GetEnemySize()
+        {
+            return View.EnemyTemplate.transform.localScale;
         }
     }
 }

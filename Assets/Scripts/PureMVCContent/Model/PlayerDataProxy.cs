@@ -25,6 +25,11 @@ namespace PureMVCContent.Model
             return PlayerData.RewardTotal;
         }
 
+        public void Clear()
+        {
+            PlayerData = new PlayerDataModel();
+            SendNotification(MyFacade.PLAYER_REWARD_UPDATED,  PlayerData.RewardTotal);
+        }
 
         public override void OnRegister()
         {

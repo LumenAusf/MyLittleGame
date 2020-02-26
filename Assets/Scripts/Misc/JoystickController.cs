@@ -36,4 +36,9 @@ public class JoystickController : MonoBehaviour
         var bull = Instantiate(bullet, bulletSpawner.position, Target.transform.rotation, BulletPool);
         bull.Fire();
     }
+
+    private void OnDisable()
+    {
+        Joystick.OnPointerUp(null);
+    }
 }

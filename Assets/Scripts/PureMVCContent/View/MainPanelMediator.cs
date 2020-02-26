@@ -26,7 +26,7 @@ namespace PureMVCContent.View
             View.ButtonLeaders.onClick.AddListener(OnClickLeaders);
             View.ButtonResetLives.onClick.AddListener(OnClickResetLives);
             View.ButtonExit.onClick.AddListener(OnClickExit);
-            View.UpdateLives(otherData.OtherData.LivesCurrent);
+            View.UpdateLives(otherData.GetLives());
         }
 
         private void OnClickExit()
@@ -47,6 +47,7 @@ namespace PureMVCContent.View
         public void OnClickPlay()
         {
             Debug.Log("start game");
+            if(otherData.GetLives() <= 0) return;
             SendNotification(MyFacade.PLAY, otherData.GetCurrentLevel());
         }
 

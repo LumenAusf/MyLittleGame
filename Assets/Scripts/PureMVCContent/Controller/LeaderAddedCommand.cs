@@ -18,6 +18,8 @@ namespace PureMVCContent.Controller
                 itemObject.SetActive(true);
                 leaders.AddItems(itemObject);
             }
+            
+            SendNotification(MyFacade.CLEAR_GAME);
         }
     }
 }

@@ -17,7 +17,7 @@ public class MyFacade : PureMVC.Patterns.Facade
     public const string LEVEL_DONE = "level_done";
     public const string GAME_IS_DONE = "game_is_done";
     public const string PLAY_NEXT_LEVEL = "play_next_level";
-    // public const string CREATED_NEW_LEADER = "created_new_leader";
+    public const string CLEAR_GAME = "clear_game";
     
     static MyFacade()
     {
@@ -58,7 +58,7 @@ public class MyFacade : PureMVC.Patterns.Facade
         RegisterCommand(ENEMY_DESTROYED, typeof(DestroyEnemyCommand));
         RegisterCommand(PLAY_NEXT_LEVEL, typeof(Play2SubCommand));
         RegisterCommand(RESET_TRIES, typeof(ResetTriesCommand));
-        // RegisterCommand(CREATED_NEW_LEADER, typeof(AddNewLeaderCommand));
+        RegisterCommand(CLEAR_GAME, typeof(ClearGameCommand));
     }
 
 

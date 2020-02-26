@@ -71,5 +71,10 @@ namespace PureMVCContent.Model
         {
             return OtherData.CurrentLevelNumber;
         }
+
+        public int GetLives()
+        {
+            return OtherData.LivesCurrent;
+        }
     }
 }

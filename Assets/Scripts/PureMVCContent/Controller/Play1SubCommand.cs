@@ -11,6 +11,7 @@ namespace PureMVCContent.Controller
         {
             Debug.Log("Sub1");
             OtherDataProxy otherProxy = Facade.RetrieveProxy(OtherDataProxy.NAME) as OtherDataProxy;
+            if(otherProxy.GetLives() <= 0) return;
             otherProxy.StartTry();
         }
     }
